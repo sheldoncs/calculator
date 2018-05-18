@@ -18,3 +18,4 @@
 
 # Ansible
 playbook.retry
+/bin/
