@@ -17,6 +17,10 @@ pipeline {
         sh "./gradlew test"
       }
     }
-
+    stage("Build Phase") {
+      steps {
+        sh "./gradlew test"
+      }
+    }
   }
 }
