@@ -22,5 +22,11 @@ pipeline {
         sh "./gradlew test"
       }
     }
+	stage("Docker build") {
+      steps {
+        sh "docker build -t sheldoncs/calculator ."
+      }
+	}
+	
   }
 }
