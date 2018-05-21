@@ -24,7 +24,7 @@ pipeline {
     }
 	stage("Docker build") {
       steps {
-        sh "docker build -t sheldoncs/calculator -f ."
+        sh "docker build -t sheldoncs/calculator ."
       }
 	}
 	
