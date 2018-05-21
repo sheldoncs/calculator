@@ -22,9 +22,10 @@ pipeline {
            sh "./gradlew build"
            }
 	}
-	stage("Docker build") {
+	stage("Docker build and run") {
       steps {
-        sh "docker build -t sheldoncs/calculator ."
+        sh "docker build -t calculator ."
+		sh "docker run -p 8085:8080 --name calculator calculator"
       }
 	}
 	
