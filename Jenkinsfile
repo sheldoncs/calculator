@@ -22,7 +22,7 @@ pipeline {
            sh "./gradlew build"
            }
 	}
-	stage("Docker build and run") {
+	stage("Docker build") {
       steps {
         sh "docker build -t calculator ."
 		
