@@ -36,7 +36,7 @@ pipeline {
     }*/
 	stage("Deploy to staging") {
 	    steps {
-		   sh "docker run -d -p 8765:8080 --name=runcalc calculator"
+		   sh "docker run -d -p 8085:8080 --name=runcalc calculator"
 		   }
 	}
 	
