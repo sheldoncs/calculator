@@ -19,7 +19,7 @@ class CalculatorController {
     String sum(@RequestParam("a") Integer a, @RequestParam("b") Integer b) {
         String result = String.valueOf(calculator.sum(a, b));
         Calculation calculation = new Calculation(a.toString(), b.toString(), result, Timestamp.from(Instant.now()));
-        calculationRepository.save(calculation);
+        //calculationRepository.save(calculation);
         System.out.println("Count: " + calculationRepository.count());
         return result;
     }
