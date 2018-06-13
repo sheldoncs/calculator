@@ -39,6 +39,12 @@ pipeline {
 		   sh "docker run -d -p 8085:8080 --name=runcalc calculator"
 		   }
 	}
+	stage("Acceptance test") {
+		steps {
+			sleep 60
+			sh "./acceptance_test.sh"
+		}
+    }
 	
   }
 }
