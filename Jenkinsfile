@@ -28,12 +28,12 @@ pipeline {
 		
       }
 	}
-	stage("Docker push") {
+	/*stage("Docker push") {
 		steps {
 		sh "docker login --username=sheldoncs"
 		sh "docker push sheldoncs/calculator"
 		}
-    }
+    }*/
 	
   }
 }
